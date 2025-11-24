@@ -17,11 +17,11 @@ export const syncUserCreation = inngest.createFunction(
         const userData = {
             _id: id,
             email: email_addresses[0].email_address,
-            name: first_name + " " + last_name,
+            name: first_name + ' ' + last_name,
             imageUrl: imageUrl
         }
         await connectDB();
-        await User.create(UserData);
+        await User.create(userData);
     }
 )
 
